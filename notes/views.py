@@ -11,8 +11,8 @@ from .serializers import NoteSerializer
 # Test View for Homepage
 
 
-def home(request):
-  return HttpResponse('<h1> MY HOME PAGE </h1>')
+# def home(request):
+#   return HttpResponse('<h1> MY HOME PAGE </h1>')
 
 
 # Create your views here.
@@ -25,9 +25,9 @@ class Notes(APIView):
     # Get all notes
   
     def get(self,request):
-        note = Note.objects.all()
+        notes = Note.objects.all()
         data = NoteSerializer(notes, many=True).data
-        return Response(serializer.data)
+        return Response(data)
         
     # Create a new note
   

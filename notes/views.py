@@ -31,3 +31,21 @@ class Notes(APIView):
         return Response(note.data, status=status.HTTP_201_CREATED)
       else:
         return Response(note.errors, status=status.HTTP_400_BAD_REQUEST)
+
+  
+
+class NotesDetail(APIView):
+  def get(self, request, pk):
+    note = get_object_or_404(Note, pk=pk)
+    data = NoteSerializer(note).data
+    return Response(data)
+
+  def put (self,request, pk):
+    data=request.data
+    note= get_object_or_404(Note,pk=pk)
+    updated = NoteSerializer(note, data=request.data, partial=True)
+    if updated.is_valid():
+      updated.save()
+      return Response(updated.data)
+    else:
+      return Response(updated.error, status=status.HTTP_400_BAD_REQUEST)

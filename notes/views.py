@@ -33,6 +33,7 @@ class Notes(APIView):
   
     def post(self,request):
       data = request.data
+      note = NoteSerializer(data=data)
       if note.is_valid():
         note.save()
         return Response(note.data, status=status.HTTP_201_CREATED)

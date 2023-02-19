@@ -17,13 +17,20 @@ def home(request):
 
 # Create your views here.
 
+
+
 class Notes(APIView):
+
+  
+    # Get all notes
+  
     def get(self,request):
         note = Note.objects.all()
         data = NoteSerializer(notes, many=True).data
         return Response(serializer.data)
         
-    
+    # Create a new note
+  
     def post(self,request):
       data = request.data
       if note.is_valid():
@@ -35,10 +42,15 @@ class Notes(APIView):
   
 
 class NotesDetail(APIView):
+
+  #  Get a note
+
   def get(self, request, pk):
     note = get_object_or_404(Note, pk=pk)
     data = NoteSerializer(note).data
     return Response(data)
+
+#  Update a note
 
   def put (self,request, pk):
     data=request.data
@@ -49,3 +61,10 @@ class NotesDetail(APIView):
       return Response(updated.data)
     else:
       return Response(updated.error, status=status.HTTP_400_BAD_REQUEST)
+
+      #  Delete a note
+
+  def delete(self,request,pk):
+    note = get_object_or_404(Note, pk=pk)
+    note.delete()
+    return Response(status=status.HTTP_400_BAD_REQUEST)

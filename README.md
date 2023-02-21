@@ -12,9 +12,9 @@
 
 
 
-![Trello](https://trello.com/b/6W1Xikw7/ment-notes)
+![Trello](https://img.shields.io/badge/Trello-%23026AA7.svg?style=for-the-badge&logo=Trello&logoColor=white)
 
-https://trello.com/b/6W1Xikw7/ment-notes
+* https://trello.com/b/6W1Xikw7/ment-notes
 
 ## Wireframe:
 

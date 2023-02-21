@@ -1,5 +1,6 @@
 # Intro
---
+* App Name: MentNotes
+* A note taking application using React js and Django Rest Framework
 
 ## SCREENSHOT
 

@@ -8,8 +8,7 @@ from .models import Note
 from .serializers import NoteSerializer
 
 
-# Test View for Homepage
-
+# # Homepage
 
 # def home(request):
 #   return HttpResponse('<h1> MY HOME PAGE </h1>')
@@ -19,7 +18,7 @@ from .serializers import NoteSerializer
 
 
 
-class Notes(APIView):
+class NotesList(APIView):
 
   
     # Get all notes
@@ -31,6 +30,7 @@ class Notes(APIView):
         
     # Create a new note
   
+class NotesPost(APIView):
     def post(self,request):
       data = request.data
       note = NoteSerializer(data=data)

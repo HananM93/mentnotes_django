@@ -2,8 +2,9 @@
 * App Name: MentNotes
 * A note taking application using React js and Django Rest Framework
 
-## SCREENSHOT
-
+## SCREEN SHOTS
+ ![alt text](https://trello.com/1/cards/63f6d8fcc60b251ccdc8a932/attachments/63f6d91232962a6ae83f8355/previews/63f6d91332962a6ae83f8366/download/site.png) 
+ 
 ## Technologies used used
 ![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)
 ![Bootstrap](https://img.shields.io/badge/bootstrap-%23563D7C.svg?style=for-the-badge&logo=bootstrap&logoColor=white)
